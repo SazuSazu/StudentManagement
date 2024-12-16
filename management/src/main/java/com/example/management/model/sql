@@ -8,3 +8,9 @@
 
     INSERT INTO student (id, name, age, pass)
     VALUES ('S001', 'John Doe', 20, TRUE);
+
+    INSERT INTO student (id, name, age, pass)
+    VALUES ('S002', 'Hisyam', 20, False);
+
+    INSERT INTO student (id, name, age, pass)
+    VALUES ('S003', 'Hisyam', 20, TRUE);

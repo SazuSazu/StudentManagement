@@ -15,4 +15,24 @@ public class StudentServiceImpl implements StudentService{
     public List<Student> retrieveStudent(){
         return studentDAO.retrieveStudent();
     }
+
+    @Override
+    public List<Student> findStudentsByParams(String id, String name, Boolean pass) {
+        return studentDAO.findStudentsByParams(id, name, pass);
+    }
+
+    @Override 
+    public boolean addStudent(Student student) {
+        return studentDAO.addStudent(student);
+    }
+
+    @Override 
+    public Student updateStudent(Student student) {
+        return studentDAO.updateStudent(student);
+    }
+
+    public boolean deleteStudent(String id) {
+        return studentDAO.deleteStudentById(id);
+    }
+
 }
