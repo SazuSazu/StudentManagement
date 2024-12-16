@@ -12,14 +12,14 @@ public class StudentDAOImpl implements StudentDAO {
     private NamedParameterJdbcTemplate jdbcTemplate;
 
     public List<Student> retrieveStudent() {
-        String sql = "SELECT * FROM Student";
+        String sql = "SELECT * FROM student";
 
         return jdbcTemplate.query(sql, (rs, rowNum) -> {
             Student student = new Student();
-            student.setId(rs.getString(1));
-            student.setName(rs.getString(2));
-            student.setAge(rs.getInt(3));
-            student.setPass(rs.getBoolean(4));
+            student.setId(rs.getString("id"));
+            student.setName(rs.getString("name"));
+            student.setAge(rs.getInt("age"));
+            student.setPass(rs.getBoolean("pass"));
             return student;
         });
     }

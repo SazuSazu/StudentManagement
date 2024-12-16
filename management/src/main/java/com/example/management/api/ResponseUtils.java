@@ -10,7 +10,11 @@ public class ResponseUtils {
         return ResponseEntity.ok(ApiResponse.success(apiVersion, data));
     }
 
-    public  static ResponseEntity<ApiResponse> error (ApiVersion apiVersion, ApiError error, Object... errorArgs){
+    public  static ResponseEntity<ApiResponse> notFoundError(ApiVersion apiVersion, ApiError error, Object... errorArgs){
+        return new ResponseEntity<>(ApiResponse.error(apiVersion, error, errorArgs), HttpStatus.NOT_FOUND);
+    }
+
+    public  static ResponseEntity<ApiResponse> error(ApiVersion apiVersion, ApiError error, Object... errorArgs){
         return new ResponseEntity<>(ApiResponse.error(apiVersion, error, errorArgs), HttpStatus.NOT_FOUND);
     }
 }
