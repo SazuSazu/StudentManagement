@@ -30,7 +30,7 @@ public class StudentController {
         try{
             List<Student> students = studentService.retrieveStudent();
             if(students.isEmpty()){
-                return ResponseUtils.error(ApiVersions.V1, ErrorCodes.ERROR_STU_02);
+                return ResponseUtils.notFoundError(ApiVersions.V1, ErrorCodes.ERROR_STU_02);
             }
             return ResponseUtils.ok(ApiVersions.V1, students);
         }catch (Exception e){

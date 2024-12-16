@@ -4,7 +4,7 @@ import com.example.management.api.model.ApiError;
 
 public enum ErrorCodes implements ApiError {
 
-    ERROR_STU_01("Error"),
+    ERROR_STU_01("Database Student Doesn't exist in Database"),
     ERROR_STU_02("No Student Record");
 
 
