@@ -1,0 +1,16 @@
+
+    CREATE TABLE student (
+        id VARCHAR(255) PRIMARY KEY, -- Corresponds to private String id
+        name VARCHAR(255) NOT NULL,  -- Corresponds to private String name
+        age INT NOT NULL,            -- Corresponds to private int age
+        pass BOOLEAN NOT NULL        -- Corresponds to private Boolean pass
+    );
+
+    INSERT INTO student (id, name, age, pass)
+    VALUES ('S001', 'John Doe', 20, TRUE);
+
+    INSERT INTO student (id, name, age, pass)
+    VALUES ('S002', 'Hisyam', 20, False);
+
+    INSERT INTO student (id, name, age, pass)
+    VALUES ('S003', 'Hisyam', 20, TRUE);
