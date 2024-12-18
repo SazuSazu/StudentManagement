@@ -56,9 +56,9 @@ public class CourseDAOimpl implements CourseDAO {
         Map<String, Object> params= new HashMap<>();
         params.put("code", course.getCode());
 
-        List<Course> students = jdbcTemplate.query(sql, params, new BeanPropertyRowMapper<>(Course.class));
+        List<Course> courses = jdbcTemplate.query(sql, params, new BeanPropertyRowMapper<>(Course.class));
 
-        if (students.isEmpty()) {
+        if (courses.isEmpty()) {
             return null;
         }
 
