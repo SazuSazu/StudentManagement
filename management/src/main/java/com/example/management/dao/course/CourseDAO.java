@@ -6,8 +6,8 @@ import java.util.List;
 
 public interface CourseDAO {
 
-    List<Course> retrieveCourse(); //retrieve all course
-    Course createCourse(Course course); //create new course
-    List<Course>  updateCourse(String code, Course course); //update the course
-    List<Course> deleteCourse(String code); //delete the course by code
+    List<Course> retrieveCourse();
+    Double retrieveMark(String code);
+    Course createCourse(Course course);
+    List<Course> deleteCourse(String code);
 }

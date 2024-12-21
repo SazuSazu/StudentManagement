@@ -15,6 +15,6 @@ public class ResponseUtils {
     }
 
     public  static ResponseEntity<ApiResponse> error(ApiVersion apiVersion, ApiError error, Object... errorArgs){
-        return new ResponseEntity<>(ApiResponse.error(apiVersion, error, errorArgs), HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(ApiResponse.error(apiVersion, error, errorArgs), HttpStatus.INTERNAL_SERVER_ERROR);
     }
 }

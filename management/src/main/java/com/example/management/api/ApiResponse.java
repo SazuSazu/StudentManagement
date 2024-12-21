@@ -27,7 +27,6 @@ public class ApiResponse {
             this.code = code;
             this.message = message;
         }
-
     }
     private String ver;
     private String requestId;
@@ -48,10 +47,4 @@ public class ApiResponse {
         return response;
     }
 
-    public static ApiResponse error(ApiVersion apiVersion, Error error){
-        ApiResponse response = new ApiResponse();
-        response.ver = apiVersion.getVer();
-        response.error = error;
-        return response;
-    }
 }

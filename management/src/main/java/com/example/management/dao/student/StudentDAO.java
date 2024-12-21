@@ -7,7 +7,7 @@ import java.util.List;
 public interface StudentDAO {
 
     List<Student> retrieveStudent();
-    
+
     List<Student> findStudentsByParams(String id, String name, Boolean pass);
 
     boolean addStudent(Student student);

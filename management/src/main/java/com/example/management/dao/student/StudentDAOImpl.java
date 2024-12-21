@@ -56,7 +56,7 @@ public class StudentDAOImpl implements StudentDAO {
         if (students.isEmpty()) {
             return null;
         }
-    
+
         return students;
     }
 
@@ -72,6 +72,7 @@ public class StudentDAOImpl implements StudentDAO {
         int rowsAffected = jdbcTemplate.update(sql, params);
         return rowsAffected > 0;
     }
+
 
     public Student updateStudent(Student student) {
         // Check if the student exists first
@@ -98,19 +99,16 @@ public class StudentDAOImpl implements StudentDAO {
             return student;
         }
 
-        return null; 
+        return null;
     }
 
     public boolean deleteStudentById(String id) {
         String sql = "DELETE FROM student WHERE LOWER(id) = :id";
-        
+
         Map<String, Object> params = new HashMap<>();
         params.put("id", id);
 
         int rowsAffected = jdbcTemplate.update(sql, params);
         return rowsAffected > 0;
     }
-
-
-
 }
